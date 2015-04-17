@@ -7,7 +7,7 @@ class vagaAdmin(admin.ModelAdmin):
 
 
 class carroAdmin(admin.ModelAdmin):
-	list_display = ['fabricante']
+	list_display = ['fabricante','marca','placa']
 
 admin.site.register(vaga,vagaAdmin)
 admin.site.register(carro,carroAdmin)

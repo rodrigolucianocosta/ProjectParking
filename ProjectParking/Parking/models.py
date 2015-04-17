@@ -11,5 +11,7 @@ class vaga(models.Model):
 
 class carro(models.Model):
 	fabricante = models.CharField('fabricante',max_length=20)
+	marca = models.CharField('marca\modelo',max_length=20,null=True)
+	placa = models.CharField('placa',max_length=10,null=True)
 	def __unicode__(self):
-		return self.fabricante
+		return u"%s %s %d"(self.fabricante,self.marca,self.placa)
