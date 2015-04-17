@@ -10,6 +10,6 @@ class vaga(models.Model):
 		return u"%d %s"(self.numero,self.bloco)
 
 class carro(models.Model):
-	fabricante = models.CharField('fabricante',max_length=10)
+	fabricante = models.CharField('fabricante',max_length=20)
 	def __unicode__(self):
 		return self.fabricante
