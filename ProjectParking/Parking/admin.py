@@ -3,7 +3,7 @@ from models import vaga,veiculo,cliente
 # Register your models here.
 
 class vagaAdmin(admin.ModelAdmin):
-	list_display = ['numero','bloco','Entrada','Saida','ValorHora']
+	list_display = ['numero','bloco','entrada','saida','valorHora']
 	save_as=True
 
 class veiculoAdmin(admin.ModelAdmin):

@@ -1,5 +1,6 @@
 #unicode: utf-8
 from django.db import models
+from django import forms
 from django.core.validators import MinValueValidator,MaxValueValidator
 TIPO_VAGA=[
 		('A','Carro'),
@@ -45,6 +46,7 @@ class cliente(models.Model):
 		verbose_name = "cliente"
 		verbose_name_plural = "clientes"
 
+
 	def __unicode__(self):
 		return u"%s %d %s %d"%(self.nome,self.cpf,self.rg,self.telefone)
 
@@ -54,13 +56,13 @@ class vaga(models.Model):
 	cliente = models.OneToOneField(cliente,verbose_name="cliente",null=True)	
 	numero = models.AutoField('numero da vaga',primary_key=True)
 	bloco  = models.CharField('bloco',max_length=2)
-	Entrada = models.DateTimeField('Entrada',null=True)
-	Saida = models.DateTimeField('Saida',null=True)
-	ValorHora = models.FloatField('valorHora',validators=[MinValueValidator(2.00),MaxValueValidator(10)],null=True)
+	entrada = models.DateTimeField('entrada',null=True)
+	saida = models.DateTimeField('Saida',null=True)
+	valorHora = models.FloatField('valorHora',validators=[MinValueValidator(2.00),MaxValueValidator(10)],null=True)
 
 	class Meta:
 		verbose_name = "vaga"
 		verbose_name_plural = "vagas"
 
 	def __unicode__(self):
-		return u"%d %s"%(self.numero,self.bloco)
+		return u"%d %s %s %s %f"%(self.numero,self.bloco,self.entrada,self.saida,self.valorHora)
