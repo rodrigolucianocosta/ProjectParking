@@ -2,6 +2,11 @@
 from django.db import models
 from django.core.validators import MinValueValidator,MaxValueValidator
 # Create your models here.
+TIPO_VAGA=[
+		('A','Carro'),
+		('B','Moto'),
+		('C','Caminhao')
+		]
 
 class carro(models.Model):
 	fabricante = models.CharField('fabricante',max_length=20)
@@ -34,9 +39,11 @@ class cliente(models.Model):
 		return u"%s %d %s %d"%(self.nome,self.cpf,self.rg,self.telefone)
 
 class vaga(models.Model):
+	
+	tipoVaga = models.CharField('Tipo de Vaga',max_length=1,choices=TIPO_VAGA)
 	cliente = models.OneToOneField(cliente,verbose_name="cliente",null=True)
-	carro = models.OneToOneField(carro,verbose_name="carro",null=True)
-	numero = models.IntegerField('numero da vaga',max_length=2)
+	#carro = models.OneToOneField(carro,verbose_name="carro",null=True)
+	numero = models.AutoField('numero da vaga',primary_key=True)
 	bloco  = models.CharField('bloco',max_length=2)
 	Entrada = models.DateTimeField('Entrada',null=True)
 	Saida = models.DateTimeField('Saida',null=True)
