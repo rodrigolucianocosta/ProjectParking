@@ -5,6 +5,8 @@ from django.db import models
 class vaga(models.Model):
 	numero = models.IntegerField('numero da vaga',max_length=2)
 	bloco  = models.CharField('bloco',max_length=2)
+	horarioEntrada = models.DateTimeField(auto_now=True,null=True)
+	horarioSaida = models.DateTimeField(auto_now=True,null=True)
 
 	def __unicode__(self):
 		return u"%d %s"(self.numero,self.bloco)
