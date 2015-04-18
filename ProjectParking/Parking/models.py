@@ -40,7 +40,7 @@ class cliente(models.Model):
 
 class vaga(models.Model):
 	
-	tipoVaga = models.CharField('Tipo de Vaga',max_length=1,choices=TIPO_VAGA)
+	tipoVaga = models.CharField('Tipo de Vaga',max_length=1,choices=TIPO_VAGA,null=True)
 	cliente = models.OneToOneField(cliente,verbose_name="cliente",null=True)
 	#carro = models.OneToOneField(carro,verbose_name="carro",null=True)
 	numero = models.AutoField('numero da vaga',primary_key=True)
