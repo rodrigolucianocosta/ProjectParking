@@ -1,21 +1,21 @@
 from django.contrib import admin
-from models import vaga,carro,cliente
+from models import vaga,veiculo,cliente
 # Register your models here.
 
 class vagaAdmin(admin.ModelAdmin):
 	list_display = ['numero','bloco','Entrada','Saida','ValorHora']
 	save_as=True
 
-class carroAdmin(admin.ModelAdmin):
+class veiculoAdmin(admin.ModelAdmin):
 	list_display = ['fabricante','marca','placa','cor']
 	save_as=True
 
 class clienteAdmin(admin.ModelAdmin):
-	list_display = ['nome','cpf','rg','telefone']
+	list_display = ['nome','email','cpf','rg','telefone']
 	save_as=True
 
 	
 
 admin.site.register(vaga,vagaAdmin)
-admin.site.register(carro,carroAdmin)
+admin.site.register(veiculo,veiculoAdmin)
 admin.site.register(cliente,clienteAdmin)
