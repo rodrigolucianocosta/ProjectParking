@@ -2,24 +2,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<title>Bootstrap, from Twitter</title>
 		<link href="{% static "Parking/bootstrap/css/bootstrap.css" %}" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-		<div class="container">
-			<span class="label label-info">Usuário:Rodrigo Luciano da Costa - Unincor 7 Periodo</span>
-			<h1>Django com Twitter Bootstrap</h1>
+			    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <!-- NAVBAR
+         ================================================== -->
+      <div class="navbar-wrapper">
+         <div class="navbar navbar-inverse">
+            <div class="container">
+               <div class="navbar-inner">
+                  
+                  <div class="nav-collapse collapse">
+                     <ul class="nav">
+                        <li><a >home</a></li>
+                        <li><a href="index.php?p=addon"> <img  >serviços</a></li>
+                        <li><a href="index.php?p=charts"><img >localizaçao</a></li>
+                        <li><a href="index.php?p=help">  <img >quem somos</a></li>
+                        <li><a href="index.php?p=linkus"><img>fale conosco</a></li>
+                     </ul>
+                  </div>
+                  <!--/.nav-collapse -->
+               </div>
+               <!-- /.navbar-inner -->
+            </div>
+            <!-- /.container -->
+         </div>
+         <!-- /.navbar -->
+      </div>
+      <!-- /.navbar-wrapper -->
+      <!-- Carousel
+         ================================================== -->
+      
+      <!-- CONTENT
+         ================================================== -->
+		<div class="container-fluid">
+
+
+			<h1><span class="label label-info">Usuário:Rodrigo Luciano da Costa - Unincor 7 Periodo</span></h1>
+			
+			<h1><p class="text-center"</p>Estacionamento Last Stand</h1>
+			<h3><em>Rodrigo Luciano da Costa.</em></h3>
+			<h2>Django com Twitter Bootstrap</h2>
+			<address>
+				<strong>LastStand, Inc.</strong><br>
+					795 Folsom Ave, Suite 600<br>
+					San Francisco, CA 94107<br>
+					<abbr title="Phone">P:</abbr> (123) 456-7890
+			</address>
+			<address>
+  				<strong>Full Name</strong><br>
+  					<a href="mailto:#">first.last@example.com</a>
+			</address>
 			<p>
-			Rodrigo Luciano da Costa.<br> 
-			Utilizando o Twitter Bootstrap em um projeto Django para avaliação.<br>
+			 
+			<h4>Utilizando o Twitter Bootstrap em um projeto Django para avaliação software Estacionamento.<br>
 			Utilizando convenções do Django para arquivos estáticos e templates,
-			sem precisar configurar nada no settings.<br><br>
+			sem precisar configurar nada no settings.<br></h4>
+
 			<a href="#" class="btn btn-primary"><i class="icon-tasks icon-white"></i>&nbsp;Detalhes...</a>
 			</p>
+
+
 				<div class="alert alert-info">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
 					<h4>Information!</h4>
 					 - Django com Twitter Bootstrap.
+				</div>
+					
 				</div>
 		</div> <!-- /container -->
 		<!-- Le javascript ================================================== -->
