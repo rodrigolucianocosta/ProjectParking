@@ -7,6 +7,9 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$','Parking.views.index',name='index'),
-
-)
+    url(r'^parking/$','Parking.views.index',name='index'),
+    url(r'^parking/servicos/$','Parking.views.servicos',name='servicos'),
+    url(r'^parking/localizacao/$','Parking.views.localizacao',name='localizacao'),
+    url(r'^parking/quemsomos/$','Parking.views.quemsomos',name='quemsomos'),
+    url(r'^parking/faleconosco/$','Parking.views.faleconosco',name='faleconosco'),
+    )

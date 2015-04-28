@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Bootstrap, from Twitter</title>
+		<link href="{% static "Parking/bootstrap/css/bootstrap.css" %}" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+      <body>
+      <!-- NAVBAR
+         ================================================== -->
+      <div class="navbar-wrapper">
+         <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+            <div class="navbar-header">
+               <div class="navbar-inner">
+                  
+                  <div class="nav-collapse collapse">
+                     <ul class="nav">
+                        <li><a >home</a></li>
+                        <li><a href="Parking/templates/Parking/servicos.html"> <img >serviços</a></li>
+                        <li><a href="localizacao.html"><img >localizaçao</a></li>
+                        <li><a href="quemSomos.html">  <img >quem somos</a></li>
+                        <li><a href="faleConosco.html"><img>fale conosco</a></li>
+                     </ul>
+                  </div>
+                  <!--/.nav-collapse -->
+               </div>
+               <!-- /.navbar-inner -->
+            </div>
+            <!-- /.container -->
+         </div>
+         <!-- /.navbar -->
+      </div>
+      <!-- /.navbar-wrapper -->
+         
+      </body>
+   
+</html>
