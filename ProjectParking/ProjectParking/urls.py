@@ -8,8 +8,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^parking/$','Parking.views.index',name='index'),
-    url(r'^parking/servicos/$','Parking.views.servicos',name='servicos'),
-    url(r'^parking/localizacao/$','Parking.views.localizacao',name='localizacao'),
-    url(r'^parking/quemsomos/$','Parking.views.quemsomos',name='quemsomos'),
-    url(r'^parking/faleconosco/$','Parking.views.faleconosco',name='faleconosco'),
+    url(r'^parking/cadastracliente/$','Parking.views.CadastraCliente',name='clientes'),
+    url(r'^parking/cadastraveiculo/$','Parking.views.CadastraVeiculo',name='cadastra veiculo'),
+    url(r'^parking/cadastravaga/$','Parking.views.CadastraVaga',name='cadastravaga'),
+    
     )

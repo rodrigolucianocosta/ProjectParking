@@ -1,46 +1,34 @@
-{% load staticfiles %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<title>Bootstrap, from Twitter</title>
-		<link href="{% static "Parking/bootstrap/css/bootstrap.css" %}" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-			    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <![endif]-->
-   </head>
+		
    <body>
       <!-- NAVBAR
          ================================================== -->
-      <div class="navbar-wrapper">
-         <div class="navbar navbar-default" role="navigation">
-            <div class="container">
-            <div class="navbar-header">
-               <div class="navbar-inner">
-                  
-                  <div class="nav-collapse collapse">
-                     <ul class="nav">
-                        <li><a href="/parking/" >home</a></li>
-                        <li><a href="/parking/servicos/"> <img >serviços</a></li>
-                        <!--<li><a href="/localizacao/"><img >localizacao</a></li>-->
-                        <!--<li><a href="/quemsomos/">  <img >quem somos</a></li>-->
-                        <!--<li><a href="/faleconosco/"><img>fale conosco</a></li>-->
-                     </ul>
-                  </div>
-                  <!--/.nav-collapse -->
-               </div>
-               <!-- /.navbar-inner -->
-            </div>
-            <!-- /.container -->
-         </div>
-         <!-- /.navbar -->
-      </div>
-      <!-- /.navbar-wrapper -->
-      <!-- Carousel
-         ================================================== -->
+      <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Projeto Estacionamento</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/parking/">Home</a></li>
+        <li><a href="/parking/cadastracliente/">Clientes</a></li>
+        <li><a href="/parking/cadastraveiculo">Veiculos</a></li>
+        <li><a href="/parking/cadastravaga">Vagas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
       
       <!-- CONTENT
          ================================================== -->
@@ -80,8 +68,7 @@
 					
 				</div>
 		</div> <!-- /container -->
-		<!-- Le javascript ================================================== -->
-		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="{% static "Parking/bootstrap/js/bootstrap.js" %}"></script>
+		
+		
 	</body>
 </html>

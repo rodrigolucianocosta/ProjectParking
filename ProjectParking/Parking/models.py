@@ -15,7 +15,26 @@ TIPO_VEICULO=[
 
 ]
 
+class cliente(models.Model):
+	nome = models.CharField('nome',max_length=50)
+	email = models.EmailField('email',max_length=50,null=True)
+	cpf = models.IntegerField('cpf',max_length=11)
+	rg = models.CharField('rg',max_length=20)
+	#tipoEndereco = models.CharField('tipo endereco',max_length=1,choices=TIPO_ENDERECO,null=True)
+	telefone = models.IntegerField('telefone',max_length=9)
+	#veiculo = models.ForeignKey(veiculo, verbose_name="veiculo",null=True)
+	
+	class Meta:
+		verbose_name = "cliente"
+		verbose_name_plural = "clientes"
+
+
+	def __unicode__(self):
+		return u"%s %d %s %d"%(self.nome,self.cpf,self.rg,self.telefone)
+
+
 class veiculo(models.Model):
+	cliente = models.ForeignKey(cliente, verbose_name="veiculo",null=True)
 	tipoVeiculo = models.CharField('Tipo de veiculo',max_length=1,choices=TIPO_VEICULO,null=True)
 	fabricante = models.CharField('fabricante',max_length=20,null=True)
 	marca = models.CharField('marca',max_length=20,null=True)
@@ -30,25 +49,6 @@ class veiculo(models.Model):
 
 	def __unicode__(self):
 		return u"%s %s %s %s"%(self.fabricante,self.marca,self.cor,self.placa)
-
-
-
-class cliente(models.Model):
-	veiculo = models.ForeignKey(veiculo, verbose_name="veiculo",null=True)
-	nome = models.CharField('nome',max_length=50)
-	email = models.EmailField('email',max_length=50,null=True)
-	cpf = models.IntegerField('cpf',max_length=11)
-	rg = models.CharField('rg',max_length=20)
-	#tipoEndereco = models.CharField('tipo endereco',max_length=1,choices=TIPO_ENDERECO,null=True)
-	telefone = models.IntegerField('telefone',max_length=9)
-	
-	class Meta:
-		verbose_name = "cliente"
-		verbose_name_plural = "clientes"
-
-
-	def __unicode__(self):
-		return u"%s %d %s %d"%(self.nome,self.cpf,self.rg,self.telefone)
 
 class vaga(models.Model):
 	

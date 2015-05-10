@@ -1,0 +1,44 @@
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+
+</head>
+<body>
+
+<!-- NAVBAR
+         ================================================== -->
+       <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Projeto Estacionamento</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/parking/">Home</a></li>
+        <li><a href="/parking/cadastracliente/">Clientes</a></li>
+        <li><a href="/parking/cadastraveiculo">Veiculos</a></li>
+        <li><a href="/parking/cadastravaga">Vagas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+         <!--================================================== -->
+<div class="container">
+   <div class="row">
+      <div class="col-md-4">
+      <form  method="post">{% csrf_token %}
+         {% bootstrap_form form  %}
+         <input type="submit" class="btn btn-primary" value="Salvar">
+      </form>
+   </div>
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div>
+   </div>
+</div>
+   </body>
+</html>
