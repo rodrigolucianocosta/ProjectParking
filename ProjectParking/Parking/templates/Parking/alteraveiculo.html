@@ -5,10 +5,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
    <head>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-      <title>Bootstrap, from Twitter</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-   </head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Bootstrap, from Twitter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
 
       <body>
       <!-- NAVBAR
@@ -29,30 +29,6 @@
   </div>
 </nav>
       <!--================================ fim da navbar=============================================-->
-
-         
-         <div class="container">
-   <div class="row">
-      <div class="col-md-7">
-         <h1 align="center">Cadastrar Vaga</h1>
-            <form  method="post">{% csrf_token %}
-            {% bootstrap_form formVaga  %}
-               <input type="submit" class="btn btn-primary" value="Cadastrar Vaga" align="center">
-            </form>
-
-   </div><br><br><br><br>
-      <div class="col-md-5">
-         <h2 align="center" >Cadastra/Altera Vaga</h2><br>
-            <h4 align="center">digite a vaga do veiculo para alteração</h4>
-             
-      </div>
-   </div>
-   <footer>
-      
-   </footer>
-</div>
-
-
       </body>
    
 </html>

@@ -34,7 +34,7 @@ class cliente(models.Model):
 
 
 class veiculo(models.Model):
-	cliente = models.ForeignKey(cliente, verbose_name="veiculo",null=True)
+	cliente = models.ForeignKey(cliente, verbose_name="cliente",null=True)
 	tipoVeiculo = models.CharField('Tipo de veiculo',max_length=1,choices=TIPO_VEICULO,null=True)
 	fabricante = models.CharField('fabricante',max_length=20,null=True)
 	marca = models.CharField('marca',max_length=20,null=True)
@@ -52,7 +52,7 @@ class veiculo(models.Model):
 
 class vaga(models.Model):
 	
-	tipoVaga = models.CharField('Tipo de Vaga',max_length=1,choices=TIPO_VAGA,null=True)
+	#tipoVaga = models.CharField('Tipo de Vaga',max_length=1,choices=TIPO_VAGA,null=True)
 	cliente = models.OneToOneField(cliente,verbose_name="cliente",null=True)	
 	numero = models.AutoField('numero da vaga',primary_key=True)
 	bloco  = models.CharField('bloco',max_length=2)

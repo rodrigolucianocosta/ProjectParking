@@ -5,13 +5,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title></title>
+   <title>Cadastro de Clientes</title>
 
 </head>
 <body>
 
 <!-- NAVBAR
          ================================================== -->
+       <!--<div class="navbar navbar-default navbar-fixed-top" role="navigation">-->
        <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -30,15 +31,22 @@
          <!--================================================== -->
 <div class="container">
    <div class="row">
-      <div class="col-md-4">
-      <form  method="post">{% csrf_token %}
-         {% bootstrap_form form  %}
-         <input type="submit" class="btn btn-primary" value="Salvar">
-      </form>
+      <div class="col-md-7">
+         <h1 align="center">Cadastrar de Clientes</h1>
+            <form  method="post">{% csrf_token %}
+            {% bootstrap_form form  %}
+               <input type="submit" class="btn btn-primary" value="Salvar" align="center">
+            </form>
+
+   </div><br><br><br><br>
+      <div class="col-md-5">
+         <h2 align="center" >Alterar Clientes</h2><br>
+            <h4 align="center">Clique para alteração/consulta</h4>
+      </div>
    </div>
-      <div class="col-md-4">.col-md-4</div>
-      <div class="col-md-4">.col-md-4</div>
-   </div>
+   <footer>
+      
+   </footer>
 </div>
    </body>
 </html>

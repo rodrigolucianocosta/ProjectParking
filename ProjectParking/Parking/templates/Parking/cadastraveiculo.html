@@ -30,7 +30,27 @@
 </nav>
       <!--================================ fim da navbar=============================================-->
 
-         <p>Cadastro de veiculos</p>
+         
+         <div class="container">
+   <div class="row">
+      <div class="col-md-7">
+         <h1 align="center">Cadastrar Veiculos</h1>
+            <form  method="post">{% csrf_token %}
+            {% bootstrap_form formVeiculo  %}
+               <input type="submit" class="btn btn-primary" value="Salvar" align="center">
+            </form>
+
+   </div><br><br><br><br>
+      <div class="col-md-5">
+         <h2 align="center" >Cadastra/Altera Veiculo</h2><br>
+            <h4 align="center">clique aqui para alteração / consulta</h4>
+             
+      </div>
+   </div>
+   <footer>
+      
+   </footer>
+</div>
 
 
       </body>
