@@ -14,7 +14,7 @@ urlpatterns = patterns('',
     url(r'^parking/listacliente/$','Parking.views.ListaCliente',name='lista_clientes'),
     #url para listar os clientes
 
-    url(r'^parking/alteracliente/(?P<codigo>[0-9+])/$','Parking.views.AlteraCliente',name='alteracliente'),
+    url(r'^parking/alteracliente/(?P<codigo>[0-9]+)/$','Parking.views.AlteraCliente',name='alteracliente'),
     #url para alterar os clientes
     
     #-------------------------------------------------------------------------------------------------------------------
@@ -22,10 +22,10 @@ urlpatterns = patterns('',
     url(r'^parking/cadastraveiculo/$','Parking.views.CadastraVeiculo',name='cadastraVeiculo'),
     #url para cadastrar veiculos
 
-    url(r'^parkinglistaveiculos/$','Parking.views.ListaVeiculos',name='lista_veiculos'),
+    #url(r'^parkinglistaveiculos/$','Parking.views.ListaVeiculos',name='lista_veiculos'),
     # url(r'^parking/alteraveiculo/$','Parking.views.Alteraveiculo',name='alteraveiculo')
 
-    url(r'^parking/alteraveiculo(?P<codigo>[0-9])/$', 'Parking.views.Alteraveiculo',name='al'),
+    #url(r'^parking/alteraveiculo(?P<codigo>[0-9])/$', 'Parking.views.Alteraveiculo',name='al'),
 
 
     #------------------------------------------------------------------------------------------------------------------

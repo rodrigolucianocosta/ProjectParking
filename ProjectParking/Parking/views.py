@@ -24,7 +24,7 @@ def ListaCliente(request,codigo=None):
 	context = { 
 	'ListaCliente': rone,
 	}
-	return render(request,"Parking/alteracliente.html",context)
+	return render(request,"Parking/listacliente.html",context)
 
 
 def CadastraCliente(request):
@@ -36,7 +36,8 @@ def CadastraCliente(request):
 	else:
 		form = ClienteForm()
 	return render(request,"Parking/cadastracliente.html",{'form':form})
-'''
+
+
 def AlteraCliente(request,codigo=None):
 	objeto = get_object_or_404(cliente,pk=codigo)
 
@@ -45,8 +46,11 @@ def AlteraCliente(request,codigo=None):
 
 		if form.is_valid():
 			form.save()
-			return redirect()
-'''
+			return redirect('listacliente')
+		else:
+			form = ClienteForm(instance=objeto)
+			return render(request,"Parking/cadastracliente.html",{'form':form})
+
 
 #==========================================================================================
 
@@ -63,10 +67,10 @@ def CadastraVeiculo(request):
 
 def CadastraVaga(request):
 	if request.method == 'POST':
-		formVaga = VagaForm(request.POST)
+		form = VagaForm(request.POST)
 		if form.is_valid():
 			form.save()
-			return redirect('cadastraVaga')
+			return redirect('index')
 	else:
 		form = VagaForm()
 	return render(request,'Parking/cadastravaga.html',{'form':form})

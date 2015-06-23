@@ -52,11 +52,11 @@ class veiculo(models.Model):
 class vaga(models.Model):
 	
 	#tipoVaga = models.CharField('Tipo de Vaga',max_length=1,choices=TIPO_VAGA,null=True)
-	cliente = models.OneToOneField(cliente,verbose_name="cliente",null=True)	
+	cliente = models.ForeignKey(cliente,verbose_name="cliente",null=True)	
 	numero = models.AutoField('numero da vaga',primary_key=True)
 	bloco  = models.CharField('bloco',max_length=2)
-	entrada = models.DateTimeField('entrada',null=True)
-	saida = models.DateTimeField('Saida',null=True)
+	entrada = models.TimeField('entrada',null=True)
+	saida = models.TimeField('Saida',null=True)
 	valorHora = models.FloatField('valorHora',validators=[MinValueValidator(2.00),MaxValueValidator(10)],null=True)
 
 	class Meta:
