@@ -1,4 +1,4 @@
-#unicode: utf-8
+#encoding: utf-8
 from django.db import models
 from django import forms
 from django.core.validators import MinValueValidator,MaxValueValidator
@@ -18,11 +18,10 @@ TIPO_VEICULO=[
 class cliente(models.Model):
 	nome = models.CharField('nome',max_length=50)
 	email = models.EmailField('email',max_length=50,null=True)
-	cpf = models.IntegerField('cpf',max_length=11)
+	cpf = models.IntegerField('cpf')
 	rg = models.CharField('rg',max_length=20)
-	#tipoEndereco = models.CharField('tipo endereco',max_length=1,choices=TIPO_ENDERECO,null=True)
-	telefone = models.IntegerField('telefone',max_length=9)
-	#veiculo = models.ForeignKey(veiculo, verbose_name="veiculo",null=True)
+	telefone = models.IntegerField('telefone')
+	
 	
 	class Meta:
 		verbose_name = "cliente"
