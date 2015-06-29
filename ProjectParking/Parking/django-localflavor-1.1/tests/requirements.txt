@@ -1,0 +1,7 @@
+# invoke
+# temporary fix for invoke on Python 3.2
+invoke==0.6.1
+coverage==3.7.1
+flake8==2.1.0
+django-discover-runner==1.0
+six==1.5.2

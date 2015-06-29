@@ -49,7 +49,7 @@ def AlteraCliente(request,codigo=None):
 			return redirect('listacliente')
 		else:
 			form = ClienteForm(instance=objeto)
-			return render(request,"Parking/cadastracliente.html",{'form':form})
+			return render(request,"Parking/alteracliente.html",{'form':form})
 
 
 #==========================================================================================

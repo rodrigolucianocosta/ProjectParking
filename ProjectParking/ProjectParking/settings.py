@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'bootstrap3',
     'Parking',
+    'localflavor',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -31,27 +31,10 @@
          <!--===============listando os clientes=================================== -->
          <h1> Lista de Clientes</h1>
          {% for rlist in ListaCliente %}
-     		<div class="panel-group" id="accordion" role=tablist aria-multiselectable="true">
-     			<div class="panel panel-default">
-     				<div class="panel-heading" role="tab" id="heading{{ forloop.counter }}">
-					  <h4 class="panel-title">
-					  	<a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ forloop.counter }}" aria-expanded="true" aria-controls="collapse{{ forloop.counter }}">
-         					<!-- listando os nomes -->
-         					{{rlist.nome}} -{{rlist.telefone}} - {{rlist.email}}
-         				</a>
-         			  </h4>
-         			</div>
-         			<div id="collapse{{ forloop.counter }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ forloop.counter }}">
-					  <div class="panel-body">
-         				{% for redit in ListaCliente %}
-         					{% if redit.ListaCliente == rlist %}
-         						<p><a href="{%url 'alteracliente' redit.id %}">{{redit.nome}}</a></p>
-         					{% endif %}
-         				{% endfor %}
-         			   </div>
-         			 </div>         				
-         		</div>
-         	</div>
+         <!-- listando os nomes -->
+         {{rlist.nome}} -{{rlist.telefone}} - {{rlist.email}}
+         	<p><a href="{% url 'alteracliente' rlist.id %}">{{ rlist.nome }}</a></p>
+         			
          {% endfor %}
 
 </body>
